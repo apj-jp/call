@@ -1,0 +1,55 @@
+body {
+  background: linear-gradient(23deg, #0074df, #4ccbcb);
+  background-size: 400% 400%;
+  animation: GradientBackground 4s ease infinite;
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.parent {
+  position: relative;
+}
+
+.centerBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.glass {
+  width: 300px;
+  height: 300px;
+  border-radius: 62px;
+  background: #005275;
+  box-shadow: 9px 9px 13px #0093b8, -9px -9px 13px #45c8d9;
+  color: white;
+  font-family: impact, sans-serif;
+  font-size: 50px;
+}
+
+.glass:hover {
+  background: #7fe3f0;
+  box-shadow: 13px 13px 24px #0093b8, -13px -13px 24px #45c8d9;
+  color: black;
+  transition: background 0.75s, box-shadow 0.75s;
+}
+
+.glass:not(:hover) {
+  transition: background 0.75s, box-shadow 0.75s;
+  background: #005275;
+  box-shadow: 9px 9px 13px #0093b8, -9px -9px 13px #45c8d9;
+  color: white;
+}
